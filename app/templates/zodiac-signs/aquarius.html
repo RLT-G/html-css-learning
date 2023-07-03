@@ -1,0 +1,22 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Водолей{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs"><button class="bttn">Вернуться к знакам зодиака</button></a></div>
+    <div><img src="https://kartinkin.net/uploads/posts/2022-12/1670597063_13-kartinkin-net-p-vodolei-kartinki-oboi-14.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="http://phonoteka.org/uploads/posts/2022-09/1663897931_7-phonoteka-org-p-oboi-na-telefon-vodolei-krasivo-8.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://phonoteka.org/uploads/posts/2022-09/1663897853_1-phonoteka-org-p-oboi-na-telefon-vodolei-krasivo-1.png" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

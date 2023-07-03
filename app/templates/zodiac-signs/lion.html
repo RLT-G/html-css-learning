@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Лев{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs"><button class="bttn">Вернуться к знакам зодиака</button></a></div>
+    <div><img src="https://vss.astrocenter.fr/astrocenter/pictures/28867278-adobestock-251810067.jpeg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://wallpapercave.com/wp/wp2986911.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

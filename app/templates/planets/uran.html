@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Уран{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets"><button class="bttn">Вернуться к списку планет</button></a></div>
+    <div><img src="https://phonoteka.org/uploads/posts/2021-06/1625080118_14-phonoteka_org-p-uran-planeta-oboi-krasivo-14.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://i.pinimg.com/originals/cf/b5/2b/cfb52b05e587389ac397130fc4637622.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://insajder.com/sites/default/files/styles/resize_800/public/upload/news/images/planet_uran_1_1.jpg?itok=wqnSFcT_" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

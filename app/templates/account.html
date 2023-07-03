@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/account.css">
+    <link rel="icon" href="{{url_for('static',filename='img/galaxy.png')}}">
+    <link rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+                    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+                    crossorigin="anonymous">
+    <title>Аккаунт</title>
+</head>
+<body>
+    <div class="grad"><div></div></div>
+    <div class="data">
+        <div class="name">
+            {{name}}</div>
+        <div class="dob">
+            Дата рождения: {{date}}</div>
+        <div class="gender">
+            {% if gender == "other" %}
+                Пол: Другой
+            {% elif gender == "male"%}
+                Пол: Мужской
+            {% else %}
+                Пол: Женский
+            {% endif %}
+        </div>
+        <div class="number-phone">
+                Номер телефона: {{number_phone}}
+        </div>
+        <div class="country">
+                Страна: {{country}}
+        </div>
+        <div class="about">
+                О себе: {{about}}
+        </div>
+        <div class="image">
+            <img class="icon" src="{{url_for('static',filename=data)}}" alt="photo">
+        </div>
+    </div>
+        <div class="return"><a href="/" ><button class="bttn">Вернуться</button></a><br></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Нептун{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets"><button class="bttn">Вернуться к списку планет</button></a></div>
+    <div><img src="https://kartinkin.net/uploads/posts/2022-03/thumbs/1646866540_38-kartinkin-net-p-kartinki-neptuna-43.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://www.vladtime.ru/uploads/posts/2017-11/1510077681_ce0e7eaa-eec9-4a02-a780-52d7f45db16c.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://astrosolution.ru/wp-content/uploads/2016/07/Neptun-v-znakah-zodiaka.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

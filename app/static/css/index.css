@@ -1,0 +1,110 @@
+.reg{
+    margin-top: 5px;
+    position: fixed;
+    float: left;
+    /*background: red;*/
+    width: 20%;
+    height: 15%;
+    left: 90%;
+    /*border: 1px solid red;*/
+}
+.icon{
+    position: fixed;
+    float: left;
+    width: 7%;
+    height 14%;
+    /*height: 7%;*/
+    /*border: 1px solid red;*/
+}
+.m-text{
+    margin: 5px;
+    padding: 5px;
+    position: fixed;
+    float: left;
+    width: 73%;
+    top: 2%;
+    left: 7%;
+    /*height: 7%;*/
+    /*border: 1px solid red;*/
+    color: #800080;
+    color: #FFFF00;
+    color: #6495ED	;
+    text-align: left;
+    font-size:20px;
+    font-style: normal;
+    font-weight: bolder;
+    font-family: 'Kanit', sans-serif;
+    text-transform: capitalize;
+    word-spacing: 2px;
+    letter-spacing: -1px;
+    line-height: 17px;
+    text-shadow: 1px 1px 2px #000080, 0 0 1em #000080, 0 0 0.2em #000080;
+}
+
+.text{
+    width: 100%;
+    height: 15%;
+    top: 15%;
+    left: 5%;
+    /*border: 1px solid red;*/
+
+    color: #6495ED;
+    text-align: center;
+    font-size:25px;
+    font-style:normal;
+    font-weight:bold;
+    font-family: 'Kanit', sans-serif;
+    text-transform: capitalize;
+    word-spacing: 2px;
+    letter-spacing: -1px;
+    line-height: 17px;
+    text-shadow: 1px 1px 2px #000080, 0 0 1em #000080, 0 0 0.2em #000080;
+    text-shadow: 15px 5px 5px #400085, 0 0 1em #400085, 0 0 0.2em #400085;
+}
+/*vertical-align:middle;
+font-size:40px;
+color:yellow;
+font-weight:bold;
+display:block;
+text-decoration:none;
+text-align:center;
+line-height:40px;
+padding:60px 5px;
+border: solid 2px red;
+border-radius: 50px;
+background: linear-gradient(#310062, #D0B4DC);
+text-shadow: 1px 1px 2px #400085, 0 0 1em #400085, 0 0 0.2em #400085;*/
+.button1{
+    position: absolute;
+    position: fixed;
+    float: left;
+    top: 35%;
+    left: 15%;
+}
+.button2{
+    position: absolute;
+    position: fixed;
+    float: left;
+    top: 35%;
+    left: 71%;
+}
+.button3{
+    position: absolute;
+    position: fixed;
+    float: left;
+    top: 35%;
+    left: 43%;
+}
+
+.ico-back{
+    display: block;
+    position: absolute;
+    position: fixed;
+    float: left;
+    width: 30%;
+    height: 15%;
+    /*border: 1px solid red;*/
+    background-image: url('/static/img/back.png');
+    background-repeat: no-repeat;
+    background-size: 100% 14vh;
+}

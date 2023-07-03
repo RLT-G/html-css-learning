@@ -1,0 +1,24 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Большая медведица{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/constellations"><button class="bttn">Вернуться к списку созвездий и звезд</button></a></div>
+
+    <div><img src="https://aiswetter-a.akamaihd.net/masters/1437465/1736x976/mars-saturn-jupiter-neptun-venus-und-vollmond.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://frapress.gr/wp-content/uploads/2018/10/the-little-dipper-in-the-night-sky_xk7fgpei__f0003.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

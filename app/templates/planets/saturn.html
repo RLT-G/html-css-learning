@@ -1,0 +1,22 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Сатурн{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets"><button class="bttn">Вернуться к списку планет</button></a></div>
+    <div><img src="https://tayniymir.com/wp-content/uploads/2019/11/1-20.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://phonoteka.org/uploads/posts/2021-10/1633096583_32-phonoteka-org-p-saturn-fon-krasivo-32.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://klike.net/uploads/posts/2023-01/1674456328_3-161.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

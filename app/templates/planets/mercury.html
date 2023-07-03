@@ -1,0 +1,22 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Меркурий{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets"><button class="bttn">Вернуться к списку планет</button></a></div>
+    <div><img src="https://knowledgenuts.com/wp-content/uploads/2017/10/Mercury-Amazing-Facts-760x760.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://jmnet.one/sfs/forum/index.php?attachments/venus-png.22087/" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://www.ansaroo.com/images/97/970566a7ad5e0cd5fa3e99133c05dd53.jpeg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Кассиопея{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/constellations"><button class="bttn">Вернуться к списку созвездий и звезд</button></a></div>
+
+    <div><img src="https://www.planetarium-moscow.ru/upload/medialibrary/02c/02cb75a44006c8482a907fd08a145368.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://stihi.ru/pics/2018/09/17/8466.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

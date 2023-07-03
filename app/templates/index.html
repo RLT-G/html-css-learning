@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block head %}
+    <link rel="stylesheet" href="../static/css/index.css">
+{% endblock %}
+{% block title %}Главная{% endblock %}
+{% block top %}
+    <div class="ico-back"></div>
+    <div class="pre">
+        <img class="icon" src="{{url_for('static',filename='img/galaxy.png')}}" alt="Иконка сайта">
+        <div class="m-text text-info">
+            <i>Site about space</i><br>
+            <a href="/forum"><button class="bttn btn btn-outline-warning">Форум</button></a>
+        </div>
+    </div>
+    <div class="reg">
+        {% if session["name"] == None %}
+            <a href="/aut" ><button class="bttn btn btn-outline-warning">Авторизация</button></a><br>
+            <a href="/reg" ><button class="bttn btn btn-outline-warning">Регистрация</button></a><br>
+        {% else %}
+            <a href="/account"><button class="bttn btn btn-outline-warning">Профиль</button></a><br>
+            <a href="/out" ><button class="bttn btn btn-outline-warning">Выход</button></a><br>
+        {% endif %}
+<!--        <a href="/account"><button class="bttn">Мой аккаунт</button></a>-->
+    </div>
+{% endblock %}
+{% block main %}
+
+    <div class="text fs-1 text-info">
+        <h1 clas="fs-1 fw-bold">Что вас интересует?</h1><br>
+    </div>
+    <div class="main-button">
+        <div class="button1">
+            <a href="/planets"><button class="bttn btn btn-info">
+            <img src="{{url_for('static',filename='img/planet.png')}}" alt="ico_planet" style="width: 175px"><br>Планеты
+            </button></a>
+        </div>
+        <div class="button2">
+            <a href="/constellations"><button class="bttn btn btn-info">
+            <img src="{{url_for('static',filename='img/constellation.png')}}" alt="ico_constellation" style="width: 175px"><br>Созвездия и звезды
+            </button></a>
+        </div>
+        <div class="button3">
+            <a href="/zodiac-signs"><button class="bttn btn btn-info">
+            <img src="{{url_for('static',filename='img/zodiac.png')}}" alt="ico_zodiac" style="width: 175px"><br>Знаки зодиака
+            </button></a>
+        </div>
+    </div>
+{% endblock %}
+{% block down %}
+<br>
+    <br><a href="/feedback"><button class="btn btn-outline-warning bttn">Оцените нас</button></a><br>
+{% endblock %}

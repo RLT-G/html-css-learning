@@ -1,0 +1,45 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Планеты{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/planets.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets/mercury"><button class="bttn">Меркурий</button></a></div>
+    <div><a href="/planets/venera"><button class="bttn">Венера</button></a></div>
+    <div><a href="/planets/earth"><button class="bttn">Земля</button></a></div>
+    <div><a href="/planets/mars"><button class="bttn">Марс</button></a></div>
+    <div><a href="/planets/jupiter"><button class="bttn">Юпитер</button></a></div>
+    <div><a href="/planets/saturn"><button class="bttn">Сатурн</button></a></div>
+    <div><a href="/planets/uran"><button class="bttn">Уран</button></a></div>
+    <div><a href="/planets/neptune"><button class="bttn">Нептун</button></a></div>
+    <div><a href="/planets/pluto"><button class="bttn">Плутон</button></a></div>
+{% endblock %}
+
+{% block main %}
+    <article class="main-article">
+<!--        <div class="m-a-photo">-->
+            <img src="{{url_for('static',filename='img/solarSystem.png')}}" alt="solarSystem.png" style="width: 300px">
+<!--        </div>-->
+<!--        <div class="m-a-text">-->
+            <l>{{t1}}</l>
+<!--        </div>-->
+    </article>
+    <article><h3>{{t2}}</h3></article>
+    <article><img src="{{url_for('static',filename='img/planet-earth.png')}}" alt="png" style="width: 500px"></article>
+    <article></article>
+    <article><h3>{{t3}}</h3></article>
+    <article><img src="{{url_for('static',filename='img/GiantPlanet.png')}}" alt="png" style="width: 500px"></article>
+    <article></article>
+    <article><h1>{{t4}}</h1></article>
+    <article><img src="{{url_for('static',filename='img/Uranus&Neptune.png')}}" alt="png" style="width: 300px"></article>
+    <article></article>
+    <article><h3>{{t5}}</h3></article>
+    <article><h3>{{t6}}</h3></article>
+    <article><img src="{{url_for('static',filename='img/poyas.png')}}" alt="png" style="width: 600px"></article>
+    <article></article>
+    <article><h2>{{t7}}</h2></article>
+    <article><img src="{{url_for('static',filename='img/sollarss.jpg')}}" alt="png" style="width: 100%"></article>
+    <article></article>
+{% endblock %}

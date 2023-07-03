@@ -1,0 +1,19 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Созвездия и звезды{% endblock %}
+{% block style %}
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/constellations/orion"><button class="bttn">Орион</button></a></div>
+    <div><a href="/constellations/polar-star"><button class="bttn">Полярная Звезда</button></a></div>
+    <div><a href="/constellations/big-dipper"><button class="bttn">Большая медведица</button></a></div>
+    <div><a href="/constellations/cassiopeia"><button class="bttn">Кассиопея</button></a></div>
+    <div><a href="/constellations/betelgeuse"><button class="bttn">Бетельгейзе</button></a></div>
+    <div><a href="/constellations/zodiac-constellations"><button class="bttn">Зодиакальные Созвездия</button></a></div>
+    <div><a href="/constellations/vega"><button class="bttn">Вега</button></a></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}<article> {{ item }} </article>{% endfor %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Стрелец{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs"><button class="bttn">Вернуться к знакам зодиака</button></a></div>
+    <div><img src="https://emotivnaluda.com/wp-content/uploads/2019/07/987-1.png" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://phonoteka.org/uploads/posts/2022-09/1663736704_12-phonoteka-org-p-strelets-oboi-na-telefon-pinterest-12.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

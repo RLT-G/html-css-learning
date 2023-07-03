@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Орион{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/constellations"><button class="bttn">Вернуться к списку созвездий и звезд</button></a></div>
+    <div><img src="https://she-win.ru/wp-content/uploads/2022/07/sozvezdie-orion-kak-najti-tri-yarkie-zvezdy-na-nebe-foto-shema.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://c1.staticflickr.com/3/2329/1858862728_e7e30f4b66_b.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

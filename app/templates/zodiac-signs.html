@@ -1,0 +1,25 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Знаки зодиака{% endblock %}
+{% block style %}
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs/horoscope"><button class="bttn">Гороскоп</button></a></div>
+    <div><a href="/zodiac-signs/aries"><button class="bttn">Овен</button></a></div>
+    <div><a href="/zodiac-signs/taurus"><button class="bttn">Телец</button></a></div>
+    <div><a href="/zodiac-signs/twins"><button class="bttn">Близнецы</button></a></div>
+    <div><a href="/zodiac-signs/cancer"><button class="bttn">Рак</button></a></div>
+    <div><a href="/zodiac-signs/lion"><button class="bttn">Лев</button></a></div>
+    <div><a href="/zodiac-signs/virgo"><button class="bttn">Дева</button></a></div>
+    <div><a href="/zodiac-signs/libra"><button class="bttn">Весы</button></a></div>
+    <div><a href="/zodiac-signs/scorpion"><button class="bttn">Скорпион</button></a></div>
+    <div><a href="/zodiac-signs/sagittarius"><button class="bttn">Стрелец</button></a></div>
+    <div><a href="/zodiac-signs/capricorn"><button class="bttn">Козерог</button></a></div>
+    <div><a href="/zodiac-signs/aquarius"><button class="bttn">Водолей</button></a></div>
+    <div><a href="/zodiac-signs/pisces"><button class="bttn">Рыбы</button></a></div>
+{% endblock %}
+
+{% block main %}
+        {% for item in t2 %} <article> {{ item }} </article>{% endfor %}
+{% endblock %}

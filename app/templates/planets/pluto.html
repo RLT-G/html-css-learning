@@ -1,0 +1,22 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Плутон{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets"><button class="bttn">Вернуться к списку планет</button></a></div>
+    <div><img src="https://cdnstatic.rg.ru/uploads/images/182/87/93/iStock-916168034.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://curiosmos.com/wp-content/uploads/2020/04/An-image-of-Pluto-scaled.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://theastroholic.co.uk/wp-content/uploads/2016/03/PIA19873-Pluto-NewHorizons-FlyingPastImage-20150714-e1458257939119.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

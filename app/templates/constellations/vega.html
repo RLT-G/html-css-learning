@@ -1,0 +1,20 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Вего{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/constellations"><button class="bttn">Вернуться к списку созвездий и звезд</button></a></div>
+    <div><img src="https://papikpro.com/uploads/posts/2023-01/1673264073_papikpro-com-p-kak-poetapno-narisovat-sozvezdie-vesi-pos-46.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

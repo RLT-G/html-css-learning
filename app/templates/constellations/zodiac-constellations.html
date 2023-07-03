@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Зодиакальные созвездия{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/constellations"><button class="bttn">Вернуться к списку созвездий и звезд</button></a></div>
+    <div><img src="https://kipmu.ru/wp-content/uploads/vdszvzd.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://www.idx365.com/upload/20162791451.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://top10a.ru/wp-content/uploads/2019/12/9-131.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

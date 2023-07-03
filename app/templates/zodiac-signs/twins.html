@@ -1,0 +1,20 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Близнецы{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs"><button class="bttn">Вернуться к знакам зодиака</button></a></div>
+    <div><img src="https://st1.uvnimg.com/93/55/d67338cc4ffdb182e3811c237e97/shutterstock_348143186%2520geminis.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://shutniks.com/wp-content/uploads/2020/04/znak_zodiaka_bliznecy_3_18164300.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

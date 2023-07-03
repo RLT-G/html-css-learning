@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Овен{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs"><button class="bttn">Вернуться к знакам зодиака</button></a></div>
+    <div><img src="https://img.jagranjosh.com/images/2022/September/2192022/areis.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://wiolife.ru/wp-content/uploads/2018/12/2Y1cl0VPYjo.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://avatars.dzeninfra.ru/get-zen_doc/1062011/pub_630d2a8ce0cf607a8497c86b_630d3347d381230ff9340679/scale_1200" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

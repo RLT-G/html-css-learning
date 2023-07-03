@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Венера{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets"><button class="bttn">Вернуться к списку планет</button></a></div>
+    <div><img src="https://techdigest.ru/upload/media/posts/2021-10/24/desyat-zagadok-venery-kotorye-stavyat-v-tupik-uchenykh_1635108592-b.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://phonoteka.org/uploads/posts/2022-09/1663102576_39-phonoteka-org-p-tekstura-veneri-pinterest-64.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://img3.akspic.ru/crops/7/7/2/3/4/143277/143277-astronomiya-polnoch-kosmos-atmosfera-venera-3840x2160.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description"
+          content="Free responsive website HTML theme with sticky sidebar for both desktop and mobile. ">
+    <link rel="stylesheet" href="../static/css/main_layout.css">
+    <link rel="icon" href="{{url_for('static',filename='img/galaxy.png')}}">
+    {% block style %}{% endblock %}
+    {% block script %}{% endblock %}
+    <script src="../static/js/main_layout.js"></script>
+</head>
+<body>
+<header>
+    <div id="header">
+        <div id="headerLeft">
+            <div id="menuToggle">&equiv;</div>
+        </div>
+        <div id="headerRight">
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a>
+                    <li><a rel="nofollow" href="/news">Новости</a>
+                    <li><a rel="nofollow" href="/forum">Форум</a>
+                    <li><a rel="nofollow" href="/feedback">Оценить нас</a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<div id="wrapall">
+    <div id="sidebar">
+        <div id="stickThis">
+            <div id="sidebarContent">
+                <a id="logo" href="/">
+                    <img class="icon" src="{{url_for('static',filename='img/galaxy.png')}}" alt="Иконка сайта" style="width: 150px;">
+                    Site about space
+                </a>
+                <aside>
+                    {% block leftPanel %}{% endblock %}
+                    <a class="back2Top" href="#">⮝&nbsp;Вернуться&nbsp;наверх&nbsp;⮝</a>
+                </aside>
+            </div>
+        </div>
+        <div id="stick-here"></div>
+    </div>
+    <div id="main">
+        <section id="page">
+            <main>
+                {% block main %}{% endblock %}
+                <article></article>
+                {% for i in "Px9awKLsuR9NY6nhAsE7FroBJJNzeN33JZpyNQ/Uwl9poSjy0g.jpg?size=1240x920&quality=95&sign=ddf1946d7fec5026d66c6148bae2bfa5&c_uniq_tag=yI_Dl7Mut7HPzwVdLM_n/202"%}<br>{% endfor %}.
+            </main>
+            <footer>
+                <p>
+                    Сайт вдохновленный космосом.
+                </p>
+            </footer>
+        </section>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Гороскоп{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/horoscope.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs"><button class="bttn">Вернуться к знакам зодиака</button></a></div>
+    <div class="horoscope-form" style="height: 400px">
+        <form method="post">
+            <label for="signs">Укажите ваш знак зодиака:</label><br>
+                <select id="signs" name="signs" required>
+                <option value="" selected>--------</option>
+                <option value="Aries">Овен</option>
+                <option value="Taurus">Телец</option>
+                <option value="Gemini">Близнецы</option>
+                <option value="Cancer">Рак</option>
+                <option value="Leo">Лев</option>
+                <option value="Virgo">Дева</option>
+                <option value="Libra">Весы</option>
+                <option value="Scorpio">Скорпион</option>
+                <option value="Sagittarius">Стрелец</option>
+                <option value="Capricorn">Козерог</option>
+                <option value="Aquarius">Водолей</option>
+                <option value="Pisces">Рыбы</option>
+                </select>
+            <input class="btttn" type="submit" value="Показать прогноз">
+        </form>
+        <div class="image">
+            <img class="img" src="{{url_for('static',filename='img/zs2.png')}}" alt="png">
+        </div>
+    </div>
+{% endblock %}
+
+{% block main %}
+    {% if sign %}<article>{{sign}}</article>{% endif %}
+    {% if data %}<article>{{data}}</article>{% endif %}
+{% endblock %}

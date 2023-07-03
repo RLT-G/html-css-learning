@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/forum.css">
+    <link rel="icon" href="{{url_for('static',filename='img/galaxy.png')}}">
+    <link rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+                    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+                    crossorigin="anonymous">
+    <title>Форум</title>
+</head>
+<body>
+    <div class="grad"></div>
+        <div class="left-side">
+            <div class="cont">
+                <a id="logo" href="/">
+                    <img class="icon" src="{{url_for('static',filename='img/galaxy.png')}}" alt="Иконка сайта" style="width: 150px;">
+                    <br>Site about space
+                </a>
+            </div>
+            <div class="cont">
+                <div><a href="/"><button class="button-27">Вернуться на главную</button></a></div>
+            </div>
+            <div class="cont">
+                <div><a href="/account"><button class="button-27">Мой аккаунт</button></a></div>
+            </div>
+            <div class="cont">
+                <div><a href="/feedback"><button class="button-27">Оцените нас</button></a></div>
+            </div>
+            <div class="cont">
+                <div><a href="/zodiac-signs/horoscope"><button class="button-27">Гороскоп</button></a></div>
+            </div>
+            <div class="cont">
+                <div><a href="/planets"><button class="button-27">Планеты</button></a></div>
+            </div>
+            <div class="cont">
+                <div><a href="/zodiac-signs"><button class="button-27">Знаки зодиака</button></a></div>
+            </div>
+        </div>
+        <main>
+            {% for item in array %}
+                <div class="container">
+                    <div class="a text-secondary"><strong>Автор:</strong> {{item[2]}}</div>
+                    <div class="d text-secondary"><strong>Дата объявления:</strong> {{item[3]}}</div>
+                    <div class="t text-warning"><strong>{{item[0]}}</strong></div>
+                    <div class="ft text-light">{{item[1]}}</div>
+                </div>
+            {% endfor %}
+
+        </main>
+        <div class="right-side">
+            <div class="cont text-white">
+                Добавить пост
+            </div>
+            <div class="cont">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title" class="text-white">Введите название поста</label>
+                        <input type="text" class="text-info" id="title" name="title" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fulltext" class="text-white">Введите полный тект</label>
+                        <textarea id="fulltext" class="text-info" name="fulltext" cols="21" rows="20" required></textarea>
+                    </div>
+                    <input type="submit" class="button-27 text-success" value="Добавить">
+                </form>
+            </div>
+        </div>
+</body>
+</html>

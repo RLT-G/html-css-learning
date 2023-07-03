@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Весы{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs"><button class="bttn">Вернуться к знакам зодиака</button></a></div>
+    <div><img src="https://papikpro.com/uploads/posts/2023-01/1673130013_papikpro-com-p-kak-poetapno-narisovat-znak-zodiaka-vesi-p-18.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://images.alfa.lt/16260/92/31.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://yt3.ggpht.com/a/AATXAJyZvs7MrlAHafFvx4_SvjGI_Byf2w1C41QrJQ=s900-c-k-c0xffffffff-no-rj-mo" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

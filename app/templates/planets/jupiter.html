@@ -1,0 +1,22 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Юпитер{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets"><button class="bttn">Вернуться к списку планет</button></a></div>
+    <div><img src="https://pluspng.com/img-png/jupiter-planet-png-jupiter-planet-776.png" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://kartinkin.net/uploads/posts/2022-12/1672127156_kartinkin-net-p-yupiter-kartinki-dlya-detei-krasivo-26.png" alt="solarSystem.png" style="width: 100%"></div>
+    <div><img src="https://kartinkin.net/uploads/posts/2022-03/1646362044_18-kartinkin-net-p-planeta-yupiter-kartinki-18.png" alt="solarSystem.png" style="width: 100%"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

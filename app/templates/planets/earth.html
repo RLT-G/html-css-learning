@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Земля{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets"><button class="bttn">Вернуться к списку планет</button></a></div>
+    <div><img src="{{url_for('static',filename='img/Земля.png')}}" alt="solarSystem.png" style="width: 100%"></div>
+    <div><img src="{{url_for('static',filename='img/Земля2.png')}}" alt="solarSystem.png" style="width: 100%"></div>
+    <div><img src="https://free-png.ru/wp-content/uploads/2022/07/free-png.ru-832.png" alt="solarSystem.png" style="width: 100%"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

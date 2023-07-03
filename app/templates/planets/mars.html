@@ -1,0 +1,22 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Марс{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/planets"><button class="bttn">Вернуться к списку планет</button></a></div>
+    <div><img src="https://free-png.ru/wp-content/uploads/2022/07/free-png.ru-849.png" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://www.pngall.com/wp-content/uploads/13/Mars-PNG-File.png" alt="solarSystem.png" style="width: 100%"></div>
+    <div><img src="https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/explore/ology-images/astronomy/piloting-red-rover/planet-mars/5010565-4-eng-US/planet-mars.png" alt="solarSystem.png" style="width: 100%"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

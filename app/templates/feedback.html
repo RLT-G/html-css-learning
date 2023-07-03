@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/feedback.css">
+    <link rel="icon" href="{{url_for('static',filename='img/galaxy.png')}}">
+    <title>Оценка</title>
+</head>
+<body>
+<div class="grad"><div></div></div>
+<div class="cont">
+    <div class="title">
+        <h1>Оцен<span>ка</span></h1>
+    </div>
+    <h1>Рейтинг - <span>{{data}}★</span></h1>
+    <span><a href="/">⏎</a></span>
+</div>
+<div class="cont2">
+    <div class="stars">
+        <form method="post">
+            <input class="star star-5" id="star-5-2" type="radio" value="5" name="star"/>
+            <label class="star star-5" for="star-5-2"></label>
+            <input class="star star-4" id="star-4-2" type="radio" value="4" name="star"/>
+            <label class="star star-4" for="star-4-2"></label>
+            <input class="star star-3" id="star-3-2" type="radio" value="3" name="star"/>
+            <label class="star star-3" for="star-3-2"></label>
+            <input class="star star-2" id="star-2-2" type="radio" value="2" name="star"/>
+            <label class="star star-2" for="star-2-2"></label>
+            <input class="star star-1" id="star-1-2" type="radio" value="1" name="star"/>
+            <label class="star star-1" for="star-1-2"></label>
+            <div class="rev-box">
+                <textarea class="review" col="30" name="review"></textarea>
+                <label class="review" for="review"></label>
+                <input class="button-27" type="submit" value="Отправить оценку">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Телец{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs"><button class="bttn">Вернуться к знакам зодиака</button></a></div>
+    <div><img src="https://news-rbk.ru/uploads/posts/2020-04/thumbs/158808510625ea83a8ca1e239.60820462.jpeg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://i.pinimg.com/originals/cb/f1/42/cbf142d475017e44daba6141ddb0becd.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://kalendar2023.ru/wp-content/uploads/2017/08/Taurus11.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

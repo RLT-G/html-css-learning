@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../static/css/reg.css">
+	<link rel="icon" href="{{url_for('static',filename='img/galaxy.png')}}">
+	    <link rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+                    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+                    crossorigin="anonymous">
+    <title>Регистрация</title>
+</head>
+<body>
+	<div class="grad"></div>
+
+	<div class="form-text">
+		Регистрация
+	</div>
+	{% if availability_error and error_name and error_password%}
+		<div class="errors">
+			<p>Пользователь с таким именем уже существует</p>
+			<p>Некорректное имя</p>
+			<p>Пароли не совпадают</p>
+		</div>
+	{% elif availability_error and error_name %}
+		<div class="errors">
+			<p>Пользователь с таким именем уже существует</p>
+			<p>Некорректное имя</p>
+		</div>
+	{% elif error_name and error_password %}
+		<div class="errors">
+			<p>Некорректное имя</p>
+			<p>Пароли не совпадают</p>
+		</div>
+	{% elif availability_error and error_password %}
+		<div class="errors">
+			<p>Пользователь с таким именем уже существует</p>
+			<p>Пароли не совпадают</p>
+		</div>
+	{% elif availability_error %}
+		<div class="errors">
+			<p>Пользователь с таким именем уже существует</p>
+		</div>
+	{% elif error_name %}
+		<div class="errors">
+			<p>Некорректное имя</p>
+		</div>
+	{% else %}
+		<div class="errors">
+			<p>Пароли не совпадают</p>
+		</div>
+	{% endif%}
+	<form method="post" enctype="multipart/form-data">
+
+		<div class="form-group">
+			<label for="name">Введите имя:</label><br>
+			{% if name %}
+				<input type="text" id="name" name="name" value="{{name}}" required>
+			{% else %}
+				<input type="text" id="name" name="name" required>
+			{% endif %}
+		</div>
+
+		<div class="form-group">
+			<label for="gender">Укажите ваш пол:</label><br>
+			{% if gender %}
+				{% if gender == "" %}
+					<select id="gender" name="gender" required>
+					<option value="" selected>--------</option>
+					<option value="male">Мужской</option>
+					<option value="female">Женский</option>
+					<option value="other">Другой</option>
+					</select>
+				{% endif %}
+				{% if gender == "male" %}
+					<select id="gender" name="gender" required>
+					<option value="">--------</option>
+					<option value="male" selected>Мужской</option>
+					<option value="female">Женский</option>
+					<option value="other">Другой</option>
+					</select>
+				{% endif %}
+				{% if gender == "female" %}
+					<select id="gender" name="gender" required>
+					<option value="">--------</option>
+					<option value="male">Мужской</option>
+					<option value="female" selected>Женский</option>
+					<option value="other">Другой</option>
+					</select>
+				{% endif %}
+				{% if gender == "other" %}
+					<select id="gender" name="gender" required>
+					<option value="">--------</option>
+					<option value="male">Мужской</option>
+					<option value="female">Женский</option>
+					<option value="other" selected>Другой</option>
+					</select>
+				{% endif %}
+			{% else %}
+				<select id="gender" name="gender" required>
+				<option value="">--------</option>
+				<option value="male">Мужской</option>
+				<option value="female">Женский</option>
+				<option value="other">Другой</option>
+				</select>
+			{% endif %}
+		</div>
+
+		<div class="form-group">
+			<label for="dob">Укажите дату рождения:</label><br>
+			{% if dob %}
+				<input type="date" id="dob" name="dob" value="{{dob}}" required>
+			{% else %}
+				<input type="date" id="dob" name="dob" required>
+			{% endif %}
+		</div>
+
+
+		<div class="form-group">
+			<label for="number_phone">Введите ваш номер телефона:</label><br>
+			{% if number_phone %}
+				<input type="text" id="number_phone" name="number_phone" value="{{number_phone}}" required>
+			{% else %}
+				<input type="text" id="number_phone" name="number_phone" required>
+			{% endif %}
+		</div>
+
+		<div class="form-group">
+			<label for="country">Введите вашу страну:</label><br>
+			{% if country %}
+				<input type="text" id="country" name="country" value="{{country}}" required>
+			{% else %}
+				<input type="text" id="country" name="country" required>
+			{% endif %}
+		</div>
+
+		<div class="form-group">
+			<label for="about">Расскажите немного о себе:</label><br>
+			{% if about %}
+				<textarea name="about" id="about" cols="65" rows="10" required>{{about}}</textarea>
+			{% else %}
+				<textarea name="about" id="about" cols="65" rows="10" required>{{about}}</textarea>
+			{% endif %}
+		</div>
+
+		<div class="form-group">
+			<label for="photo">Добавьте фото:</label><br>
+			<input type="file" title="" id="photo" name="file" accept="image/*" class="custom-file-input" required>
+		</div>
+
+		<div class="form-group">
+			<label for="password1">Введите пароль:</label><br>
+			{% if password1 %}
+				<input type="password" id="password1" name="password1" value="{{password1}}" required>
+			{% else %}
+				<input type="password" id="password1" name="password1" required>
+			{% endif %}
+		</div>
+
+		<div class="form-group">
+			<label for="password2">Повторите пароль:</label><br>
+			{% if password1 %}
+				<input type="password" id="password2" name="password2" value="" required>
+			{% else %}
+				<input type="password" id="password2" name="password2" required>
+			{% endif %}
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Зарегистрироваться">
+		</div>
+	</form>
+	<a href="/" ><button class="bttn">Вернуться</button></a><br>
+</body>
+</html>

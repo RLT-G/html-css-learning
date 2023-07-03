@@ -1,0 +1,20 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Скорпион{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/zodiac-signs"><button class="bttn">Вернуться к знакам зодиака</button></a></div>
+    <div><img src="https://grodno24.com/assets/images/2021/10/skorpion.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="http://adonius.club/uploads/posts/2022-08/thumbs/1659535367_24-adonius-club-p-skorpion-zodiak-krasivo-foto-24.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

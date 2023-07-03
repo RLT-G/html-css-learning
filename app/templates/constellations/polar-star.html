@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Полярная звезда{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/constellations"><button class="bttn">Вернуться к списку созвездий и звезд</button></a></div>
+    <div><img src="https://sun9-70.userapi.com/impg/Px9awKLsuR9NY6nhAsE7FroBJJNzeN33JZpyNQ/Uwl9poSjy0g.jpg?size=1240x920&quality=95&sign=ddf1946d7fec5026d66c6148bae2bfa5&c_uniq_tag=yI_Dl7Mut7HPzwVdLM_nRFCUs0smEYGSoI2zm5frXFo&type=album" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://sciencesensei.com/wp-content/uploads/2021/11/blue-giant-star.jpeg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}

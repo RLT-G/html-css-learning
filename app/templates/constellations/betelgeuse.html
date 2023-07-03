@@ -1,0 +1,21 @@
+{% extends 'main_layout.html' %}
+
+{% block title %}Бетельгейзе{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mercury.css">
+{% endblock %}
+{% block script %}{% endblock %}
+{% block leftPanel %}
+    <div><a href="/constellations"><button class="bttn">Вернуться к списку созвездий и звезд</button></a></div>
+    <div><img src="https://cdn.fishki.net/upload/post/2020/02/16/3231859/betel.jpg" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://alivespace.ru/wp-content/uploads/1504693907182239052.png" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+    <div><img src="https://gamerwall.pro/uploads/posts/2022-02/1645547917_16-gamerwall-pro-p-kosmos-betelgeize-krasivie-oboi-21.png" alt="solarSystem.png" style="width: 100%;border-radius:25px;"></div>
+{% endblock %}
+
+{% block main %}
+    {% for item in t2 %}
+        <article>
+            {{ item }}
+        </article>
+    {% endfor %}
+{% endblock %}
